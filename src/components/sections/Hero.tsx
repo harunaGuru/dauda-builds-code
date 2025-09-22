@@ -4,75 +4,84 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Download, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import profilePhoto from '@/assets/profile-photo.png';
-
 const Hero = () => {
-  const techStack = [
-    'React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'GSAP'
-  ];
-
-  return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero">
+  const techStack = ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'GSAP'];
+  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
-          >
-            <motion.h1 
-              className="text-5xl lg:text-7xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} className="text-center lg:text-left">
+            <motion.h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight" initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: 0.2,
+            duration: 0.8
+          }}>
               <span className="text-foreground">Dauda</span>{' '}
               <span className="text-primary">Oladipupo</span>{' '}
               <span className="text-foreground">Haruna</span>
             </motion.h1>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="mb-6"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: 0.4,
+            duration: 0.8
+          }} className="mb-6">
               <h2 className="text-2xl lg:text-3xl font-semibold text-muted-foreground mb-4">
                 Frontend Engineer
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                React & Next.js specialist building performant, accessible web apps. 
-                4+ years experience based in Abuja, Nigeria.
-              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">I’m a React & Next.js developer passionate about building fast, accessible web apps that feel smooth and easy to use. With over 4 years of experience, I’ve worked on projects big and small, bringing ideas to life from Abuja, Nigeria.</p>
             </motion.div>
 
             {/* Tech Stack */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="mb-8"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: 0.6,
+            duration: 0.8
+          }} className="mb-8">
               <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                {techStack.map((tech, index) => (
-                  <Badge key={tech} variant="secondary" className="text-sm">
+                {techStack.map((tech, index) => <Badge key={tech} variant="secondary" className="text-sm">
                     {tech}
-                  </Badge>
-                ))}
+                  </Badge>)}
               </div>
             </motion.div>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: 0.8,
+            duration: 0.8
+          }} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="group">
                 <Link to="/portfolio">
                   View Portfolio
@@ -88,12 +97,16 @@ const Hero = () => {
             </motion.div>
 
             {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
-              className="mt-12 flex justify-center lg:justify-start"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: 1,
+            duration: 0.8
+          }} className="mt-12 flex justify-center lg:justify-start">
               <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 shadow-card border border-border">
                 <div className="flex divide-x divide-border">
                   <div className="pr-6">
@@ -110,57 +123,47 @@ const Hero = () => {
           </motion.div>
 
           {/* Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="relative"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          scale: 0.8
+        }} animate={{
+          opacity: 1,
+          scale: 1
+        }} transition={{
+          delay: 0.5,
+          duration: 1
+        }} className="relative">
             <div className="relative w-80 h-80 mx-auto lg:w-96 lg:h-96">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-glow" />
               
               {/* Image Container */}
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/30 shadow-glow">
-                <img
-                  src={profilePhoto}
-                  alt="Dauda Oladipupo Haruna - Frontend Engineer"
-                  className="w-full h-full object-cover"
-                />
+                <img src={profilePhoto} alt="Dauda Oladipupo Haruna - Frontend Engineer" className="w-full h-full object-cover" />
               </div>
 
               {/* Floating Elements */}
-              <motion.div
-                animate={{ 
-                  y: [0, -10, 0],
-                  rotate: [0, 5, 0]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="absolute -top-4 -right-4 w-16 h-16 bg-primary/10 rounded-full border border-primary/30"
-              />
-              <motion.div
-                animate={{ 
-                  y: [0, 10, 0],
-                  rotate: [0, -5, 0]
-                }}
-                transition={{ 
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-                className="absolute -bottom-2 -left-6 w-12 h-12 bg-primary/10 rounded-full border border-primary/30"
-              />
+              <motion.div animate={{
+              y: [0, -10, 0],
+              rotate: [0, 5, 0]
+            }} transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }} className="absolute -top-4 -right-4 w-16 h-16 bg-primary/10 rounded-full border border-primary/30" />
+              <motion.div animate={{
+              y: [0, 10, 0],
+              rotate: [0, -5, 0]
+            }} transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }} className="absolute -bottom-2 -left-6 w-12 h-12 bg-primary/10 rounded-full border border-primary/30" />
             </div>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
