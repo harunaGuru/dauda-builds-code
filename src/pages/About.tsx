@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Download, ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Download, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
     <div className="py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl py-4 shadow-glow mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,8 @@ const About = () => {
         >
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">About Me</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Passionate frontend developer crafting digital experiences with modern technologies
+            Passionate frontend developer crafting digital experiences with
+            modern technologies
           </p>
         </motion.div>
 
@@ -31,10 +32,13 @@ const About = () => {
           <Card className="p-8">
             <CardContent className="p-0">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                I am a frontend developer with 4+ years of experience, based in Abuja, Nigeria. 
-                I've built a range of apps from streaming to ecommerce and bring backend experience 
-                (Node.js + Express) to help consume APIs and troubleshoot quickly. I specialize in 
-                creating performant, accessible web applications that provide exceptional user 
+                I’m a frontend developer with over 4 years of experience, based
+                in Abuja, Nigeria. I’ve worked on a variety of projects, from
+                streaming platforms to ecommerce applications, with a strong
+                focus on building performant, accessible, and responsive web
+                apps. While I specialize in React and Next.js on the frontend, I
+                also have working knowledge of backend technologies, which helps
+                me integrate APIs effectively and deliver seamless user
                 experiences across all devices.
               </p>
             </CardContent>
@@ -52,15 +56,21 @@ const About = () => {
           <div className="space-y-6">
             <Card className="p-6">
               <CardContent className="p-0">
-                <h3 className="text-xl font-semibold mb-2">Bachelor of Agriculture in Animal Sciences</h3>
-                <p className="text-muted-foreground mb-2">Obafemi Awolowo University, Ile-Ife</p>
+                <h3 className="text-xl font-semibold mb-2">
+                  Bachelor of Agriculture in Animal Sciences
+                </h3>
+                <p className="text-muted-foreground mb-2">
+                  Obafemi Awolowo University, Ile-Ife
+                </p>
                 <p className="text-sm text-muted-foreground">2008 – 2013</p>
               </CardContent>
             </Card>
-            
+
             <Card className="p-6">
               <CardContent className="p-0">
-                <h3 className="text-xl font-semibold mb-2">Full-stack Development Bootcamp</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Full-stack Development Bootcamp
+                </h3>
                 <p className="text-muted-foreground mb-2">Devsnet Bootcamp</p>
                 <p className="text-sm text-muted-foreground">2022 – 2023</p>
               </CardContent>
@@ -82,14 +92,14 @@ const About = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Collaboration Approach</h3>
                   <p className="text-muted-foreground">
-                    I believe in clear communication, iterative development, and 
+                    I believe in clear communication, iterative development, and
                     close collaboration with designers and stakeholders.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Availability</h3>
                   <p className="text-muted-foreground">
-                    Available for both freelance projects and full-time roles. 
+                    Available for both freelance projects and full-time roles.
                     Based in GMT+1 timezone with flexible working hours.
                   </p>
                 </div>

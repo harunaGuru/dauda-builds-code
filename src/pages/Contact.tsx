@@ -1,68 +1,77 @@
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Github, 
-  Linkedin, 
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Linkedin,
   Clock,
   Send,
-  Loader2
-} from 'lucide-react';
-import { useState } from 'react';
-import { useToast } from '@/hooks/use-toast';
-import emailjs from '@emailjs/browser';
+  Loader2,
+} from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     try {
       await emailjs.send(
-        'service_j95kcm7', // Service ID
-        'template_tjug8wq', // Template ID
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         {
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          to_email: 'haruna.dauda123@gmail.com'
+          to_email: "haruna.dauda123@gmail.com",
         },
-        'iRwbOWM2_DMvv3a74' // Public Key
+        import.meta.env.VITE_PUBLIC_KEY
       );
-      
+
       toast({
         title: "Message Sent!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
-      
+
       // Reset form
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error("EmailJS Error:", error);
       toast({
         title: "Failed to Send",
-        description: "Something went wrong. Please try again or email me directly.",
+        description:
+          "Something went wrong. Please try again or email me directly.",
         variant: "destructive",
       });
     } finally {
@@ -76,29 +85,29 @@ const Contact = () => {
       title: "Email",
       value: "haruna.dauda123@gmail.com",
       link: "mailto:haruna.dauda123@gmail.com",
-      color: "text-blue-500"
+      color: "text-blue-500",
     },
     {
       icon: Phone,
       title: "Phone",
       value: "+234 9034307059",
       link: "tel:+2349034307059",
-      color: "text-green-500"
+      color: "text-green-500",
     },
     {
       icon: MapPin,
       title: "Location",
       value: "Abuja, Nigeria",
       link: "#",
-      color: "text-red-500"
+      color: "text-red-500",
     },
     {
       icon: Clock,
       title: "Timezone",
       value: "GMT+1 (West Africa Time)",
       link: "#",
-      color: "text-purple-500"
-    }
+      color: "text-purple-500",
+    },
   ];
 
   const socialLinks = [
@@ -106,20 +115,20 @@ const Contact = () => {
       icon: Github,
       title: "GitHub",
       url: "https://github.com/harunaGuru",
-      color: "hover:text-gray-600"
+      color: "hover:text-gray-600",
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
       url: "https://linkedin.com/in/dauda-haruna",
-      color: "hover:text-blue-600"
+      color: "hover:text-blue-600",
     },
     {
       icon: Mail,
       title: "Email",
       url: "mailto:haruna.dauda123@gmail.com",
-      color: "hover:text-green-600"
-    }
+      color: "hover:text-green-600",
+    },
   ];
 
   return (
@@ -134,7 +143,8 @@ const Contact = () => {
         >
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">Get In Touch</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your next project? Let's discuss how I can help bring your ideas to life.
+            Ready to start your next project? Let's discuss how I can help bring
+            your ideas to life.
           </p>
         </motion.div>
 
@@ -148,7 +158,8 @@ const Contact = () => {
             <div className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
               <p className="text-muted-foreground mb-6">
-                Based in Abuja, Nigeria (GMT+1). Available for freelance projects and full-time opportunities.
+                Based in Abuja, Nigeria (GMT+1). Available for freelance
+                projects and full-time opportunities.
               </p>
             </div>
 
@@ -166,12 +177,16 @@ const Contact = () => {
                     <Card className="hover:shadow-card transition-all duration-300">
                       <CardContent className="p-4">
                         <div className="flex items-center space-x-4">
-                          <div className={`w-12 h-12 rounded-lg bg-background border flex items-center justify-center`}>
-                            <IconComponent className={`h-5 w-5 ${info.color}`} />
+                          <div
+                            className={`w-12 h-12 rounded-lg bg-background border flex items-center justify-center`}
+                          >
+                            <IconComponent
+                              className={`h-5 w-5 ${info.color}`}
+                            />
                           </div>
                           <div>
                             <h3 className="font-semibold">{info.title}</h3>
-                            <a 
+                            <a
                               href={info.link}
                               className="text-muted-foreground hover:text-primary transition-colors"
                             >
@@ -204,7 +219,7 @@ const Contact = () => {
                       asChild
                       className={`${social.color} transition-colors`}
                     >
-                      <a 
+                      <a
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -226,7 +241,8 @@ const Contact = () => {
               className="mt-8 p-4 bg-muted/50 rounded-lg"
             >
               <p className="text-sm text-muted-foreground">
-                <strong>Privacy Note:</strong> Your message will be kept private and I'll respond within 24 hours.
+                <strong>Privacy Note:</strong> Your message will be kept private
+                and I'll respond within 24 hours.
               </p>
             </motion.div>
           </motion.div>
@@ -241,7 +257,8 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle>Send Me a Message</CardTitle>
                 <CardDescription>
-                  Fill out the form below and I'll get back to you as soon as possible.
+                  Fill out the form below and I'll get back to you as soon as
+                  possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -297,7 +314,12 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full group" disabled={isLoading}>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full group"
+                    disabled={isLoading}
+                  >
                     {isLoading ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
