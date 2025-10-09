@@ -8,11 +8,28 @@ const Hero = () => {
   const techStack = [
     "React",
     "Next.js",
+    "JavaScript",
+    "React Router",
+    "TanStack Query",
     "TypeScript",
     "Tailwind CSS",
     "Material UI",
     "Git",
     "Redux",
+    "Jest",
+    "React Testing Library",
+    "React Hook Form",
+    "Framer Motion",
+    "Firebase",
+    "Stripe",
+    "Zustand",
+    "Vite",
+    "Cypress",
+    "Axios",
+    "SWR",
+    "Rechart",
+    "Leaflet",
+    "Shadcn UI",
     "GSAP",
     "Node.js",
   ];
@@ -53,9 +70,9 @@ const Hero = () => {
                 duration: 0.8,
               }}
             >
-              <span className="text-foreground">Dauda</span>{" "}
+              <span className="text-gray-200">Dauda</span>{" "}
               <span className="text-primary">Oladipupo</span>{" "}
-              <span className="text-foreground">Haruna</span>
+              <span className="text-gray-200">Haruna</span>
             </motion.h1>
 
             <motion.div
@@ -77,10 +94,11 @@ const Hero = () => {
                 Frontend Engineer
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                I’m a React & Next.js developer passionate about building fast,
-                accessible web apps that feel smooth and easy to use. With over
-                4 years of experience, I’ve worked on projects big and small,
-                bringing ideas to life from Abuja, Nigeria.
+                I'm a React & Next.js developer with 3+ years of experience
+                creating fast, accessible, and user-friendly web applications.
+                Skilled at delivering projects of all sizes, from concept to
+                launch, with a focus on performance, usability, and smooth user
+                experiences. Based in Abuja, Nigeria.
               </p>
             </motion.div>
 

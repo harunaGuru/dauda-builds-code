@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="flex space-x-1">
               <Button variant="ghost" size="sm" asChild>
                 <a
-                  href="https://github.com/harunaGuru?tab=repositories"
+                  href="https://github.com/harunaGuru"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
@@ -40,7 +40,7 @@ const Footer = () => {
               </Button> */}
               <Button variant="ghost" size="sm" asChild>
                 <a
-                  href="https://linkedin.com/in/dauda-haruna"
+                  href="https://www.linkedin.com/in/haruna-oladipupo-dauda"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"

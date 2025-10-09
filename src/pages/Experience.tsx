@@ -10,7 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, ExternalLink, Download } from "lucide-react";
 import { Link } from "react-router-dom";
-import HarunaCV from "@/assets/Haruna_Dauda_CV.pdf";
+// import HarunaCV from "@/assets/Haruna_Dauda_CV.pdf";
+import CV from "@/assets/myCV.pdf";
 
 const Experience = () => {
   const experiences = [
@@ -19,6 +20,28 @@ const Experience = () => {
       company: "Vehance Technologies",
       location: "Kano, Nigeria",
       period: "Jan 2024 – May 2025",
+      type: "Contract",
+      achievements: [
+        "Led development of responsive web applications serving 10k+ users",
+        "Improved application performance by 40% through code optimization",
+        "Implemented accessibility features achieving WCAG AA compliance",
+        "Mentored junior developers on React best practices",
+      ],
+      tech: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Lighthouse Audit",
+        "Shadcn UI",
+        "Redux",
+      ],
+    },
+    {
+      title: "Frontend Engineer",
+      company: "Uniccon Group of Companies",
+      location: "Lagos, Nigeria",
+      period: "Aug 2022 – Dec 2023",
       type: "Full-time",
       achievements: [
         "Led development of responsive web applications serving 10k+ users",
@@ -26,13 +49,21 @@ const Experience = () => {
         "Implemented accessibility features achieving WCAG AA compliance",
         "Mentored junior developers on React best practices",
       ],
-      tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "REST APIs"],
+      tech: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "REST APIs",
+        "Framer Motion",
+        "React Testing Library",
+      ],
     },
     {
       title: "Junior Frontend Developer (Intern)",
       company: "HIIT plc",
       location: "Abuja, Nigeria",
-      period: "Mar 2023 – Dec 2023",
+      period: "Sep 2021 – Jul 2022",
       type: "Internship",
       achievements: [
         "Developed UI components for internal management system",
@@ -40,22 +71,22 @@ const Experience = () => {
         "Participated in code reviews and agile development processes",
         "Built responsive layouts for mobile and desktop platforms",
       ],
-      tech: ["React", "JavaScript", "CSS3", "Bootstrap", "Git"],
+      tech: ["React", "JavaScript", "CSS3", "Bootstrap", "MUI", "Git", "Jest"],
     },
-    {
-      title: "Freelance Frontend Developer",
-      company: "Self-employed",
-      location: "Abuja, Nigeria",
-      period: "Nov 2021 – Mar 2023",
-      type: "Freelance",
-      achievements: [
-        "Delivered 15+ projects for clients across various industries",
-        "Built e-commerce platforms with payment integration",
-        "Created landing pages with conversion optimization",
-        "Provided ongoing maintenance and support for client websites",
-      ],
-      tech: ["HTML5", "CSS3", "JavaScript", "React", "WordPress"],
-    },
+    // {
+    //   title: "Freelance Frontend Developer",
+    //   company: "Self-employed",
+    //   location: "Abuja, Nigeria",
+    //   period: "Nov 2021 – Mar 2023",
+    //   type: "Freelance",
+    //   achievements: [
+    //     "Delivered 15+ projects for clients across various industries",
+    //     "Built e-commerce platforms with payment integration",
+    //     "Created landing pages with conversion optimization",
+    //     "Provided ongoing maintenance and support for client websites",
+    //   ],
+    //   tech: ["HTML5", "CSS3", "JavaScript", "React", "WordPress"],
+    // },
   ];
 
   const skills = [
@@ -69,13 +100,34 @@ const Experience = () => {
     },
     {
       category: "Tools",
-      items: ["Git", "Webpack", "Vite", "Jest", "React Testing Library"],
+      items: [
+        "Git",
+        "Webpack",
+        "Vite",
+        "Jest",
+        "React Testing Library",
+        "Postman",
+      ],
     },
     {
       category: "Animation",
       items: ["GSAP", "Framer Motion", "CSS Animations"],
     },
-    { category: "Backend", items: ["Node.js", "Express", "REST APIs"] },
+    {
+      category: "State Management",
+      items: ["Redux Toolkit", "Tanstack Query", "Context API"],
+    },
+    {
+      category: "Performance and Optimization",
+      items: [
+        "Lazy Loading",
+        "Code Splitting",
+        "Catching Strategies",
+        "Rendering Optimization",
+        "Lighthouse Audits",
+      ],
+    },
+    // { category: "Backend", items: ["Node.js", "Express", "REST APIs"] },
     // { category: "Database", items: ["MongoDB", "PostgreSQL", "Firebase"] }
   ];
 
@@ -216,7 +268,7 @@ const Experience = () => {
             Download my full CV or get in touch to discuss opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={HarunaCV} download>
+            <a href={CV} download>
               <Button size="lg" className="group">
                 <Download className="mr-2 h-4 w-4" />
                 Download CV

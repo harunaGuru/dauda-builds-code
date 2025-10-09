@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import CV from "@/assets/myCV.pdf";
 
 const About = () => {
   return (
@@ -116,10 +117,12 @@ const About = () => {
           className="text-center"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group">
-              <Download className="mr-2 h-4 w-4" />
-              Download CV
-            </Button>
+            <a href={CV} download>
+              <Button size="lg" className="group">
+                <Download className="mr-2 h-4 w-4" />
+                Download CV
+              </Button>
+            </a>
             <Button variant="outline" size="lg" asChild>
               <Link to="/contact">
                 Get In Touch

@@ -9,8 +9,16 @@ All colors MUST be HSL for proper theme switching.
 @layer base {
   :root {
     /* Base colors */
-    --background: 0 0% 98%;
-    --foreground: 215 25% 12%;
+    /* --background: 0 0% 98%;
+    --foreground: 215 25% 12%; */
+    /* --background: 210, 20%, 97%;
+    --foreground: 220, 25%, 15%; */
+
+    /* --background: 0, 0%, 96%;
+    --foreground: 220, 33%, 11%; */
+
+    --background: 40, 40%, 98%;
+    --foreground: 220, 30%, 15%;
 
     /* Card system */
     --card: 0 0% 100%;

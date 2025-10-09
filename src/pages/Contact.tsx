@@ -120,13 +120,14 @@ const Contact = () => {
     {
       icon: Linkedin,
       title: "LinkedIn",
-      url: "https://linkedin.com/in/dauda-haruna",
+      url: "https://www.linkedin.com/in/haruna-oladipupo-dauda",
       color: "hover:text-blue-600",
     },
     {
       icon: Mail,
       title: "Email",
-      url: "mailto:haruna.dauda123@gmail.com",
+      // url: "mailto:haruna.dauda123@gmail.com",
+      url: "#",
       color: "hover:text-green-600",
     },
   ];
