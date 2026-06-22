@@ -160,6 +160,17 @@ const Portfolio = () => {
     "Node.js",
   ];
 
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((p) =>
+          p.tech.some(
+            (t) => t.toLowerCase() === activeFilter.toLowerCase()
+          )
+        );
+
   return (
     <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
