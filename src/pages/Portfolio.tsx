@@ -14,11 +14,56 @@ import ecommerceProject from "@/assets/ecommerce-project.png";
 import EassyPPP from "@/assets/easy-ppp2.png";
 import Postman from "@/assets/postman.webp";
 import LandingPage from "@/assets/landing-page.png";
+import macosPortfolio from "@/assets/macos-portfolio.png.asset.json";
+import majehub from "@/assets/majehub.avif.asset.json";
 
 const Portfolio = () => {
   const projects = [
     {
-      id: 1,
+      id: 0,
+      title: "macOS-Inspired Portfolio",
+      description:
+        "A macOS-style desktop portfolio with dock buttons, draggable windows, and fluid animations—every click opens a new window for an engaging mini-OS experience.",
+      image: macosPortfolio.url,
+      tech: ["React", "Vite", "GSAP", "Framer Motion", "Zustand", "react-pdf", "Tailwind CSS"],
+      highlights: [
+        "Draggable, resizable macOS-style windows",
+        "Dock with launch animations and reusable components",
+        "Smooth GSAP + Framer Motion interactions",
+      ],
+      demoUrl: "https://haruna-web.netlify.app/",
+      repoUrl: "https://github.com/harunaGuru",
+    },
+    {
+      id: 6,
+      title: "Majehub Marketplace",
+      description:
+        "Enterprise-grade e-commerce marketplace with three frontend portals (User, Seller, Admin) and 11 decoupled backend microservices designed for scale, resilience, and real-time engagement.",
+      image: majehub.url,
+      tech: [
+        "Nx Monorepo",
+        "Next.js",
+        "TypeScript",
+        "Bun",
+        "Express.js",
+        "Prisma",
+        "MongoDB",
+        "Kafka",
+        "Redis",
+        "WebSocket",
+        "TensorFlow.js",
+        "Firebase Auth",
+      ],
+      highlights: [
+        "11 microservices behind an API gateway",
+        "Real-time seller/user chat, analytics & logging via WebSocket + Kafka",
+        "ML-powered recommendations with TensorFlow.js, Redis caching, device tracking",
+      ],
+      demoUrl: "#",
+      repoUrl: "#",
+      comingSoon: true,
+    },
+    {
       title: "ParityDeals Clone",
       description:
         "A Next.js application featuring server-side rendering, payment integration, and dynamic pricing based on user location.",
@@ -160,26 +205,34 @@ const Portfolio = () => {
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                    <Button size="sm" asChild>
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
-                    <Button variant="outline" size="sm" asChild>
-                      <a
-                        href={project.repoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
+                    {project.comingSoon ? (
+                      <Badge variant="default" className="text-sm px-4 py-2">
+                        Coming Soon
+                      </Badge>
+                    ) : (
+                      <>
+                        <Button size="sm" asChild>
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            Live Demo
+                          </a>
+                        </Button>
+                        <Button variant="outline" size="sm" asChild>
+                          <a
+                            href={project.repoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="h-4 w-4 mr-2" />
+                            Code
+                          </a>
+                        </Button>
+                      </>
+                    )}
                   </div>
                 </div>
 
