@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Card,
@@ -159,6 +160,17 @@ const Portfolio = () => {
     "Node.js",
   ];
 
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((p) =>
+          p.tech.some(
+            (t) => t.toLowerCase() === activeFilter.toLowerCase()
+          )
+        );
+
   return (
     <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,10 +188,11 @@ const Portfolio = () => {
 
           {/* Tech Filters */}
           <div className="flex flex-wrap gap-2 justify-center">
-            {techFilters.map((tech, index) => (
+            {techFilters.map((tech) => (
               <Badge
                 key={tech}
-                variant={index === 0 ? "default" : "secondary"}
+                variant={activeFilter === tech ? "default" : "secondary"}
+                onClick={() => setActiveFilter(tech)}
                 className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 {tech}
@@ -190,9 +203,9 @@ const Portfolio = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
-              key={project.id}
+              key={project.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
