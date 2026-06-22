@@ -99,14 +99,14 @@ const Hero = () => {
               className="mb-6"
             >
               <h2 className="text-2xl lg:text-3xl font-semibold text-muted-foreground mb-4">
-                Frontend Engineer
+                Fullstack Engineer
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                I'm a React & Next.js developer with 3+ years of experience
-                creating fast, accessible, and user-friendly web applications.
-                Skilled at delivering projects of all sizes, from concept to
-                launch, with a focus on performance, usability, and smooth user
-                experiences. Based in Abuja, Nigeria.
+                I'm a Fullstack developer(Frontend-focused) with 4+ years of
+                experience creating fast, accessible, and user-friendly web
+                applications. Skilled at delivering projects of all sizes, from
+                concept to launch, with a focus on performance, usability, and
+                smooth user experiences. Based in Abuja, Nigeria.
               </p>
             </motion.div>
 
