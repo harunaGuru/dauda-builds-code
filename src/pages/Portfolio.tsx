@@ -84,6 +84,7 @@ const Portfolio = () => {
       ],
       demoUrl: "https://easy-pppp.vercel.app",
       repoUrl: "https://github.com/harunaGuru/Easy-PPP",
+      pinned: true,
     },
     {
       id: 2,
