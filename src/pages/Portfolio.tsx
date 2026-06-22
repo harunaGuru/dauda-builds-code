@@ -15,8 +15,8 @@ import ecommerceProject from "@/assets/ecommerce-project.png";
 import EassyPPP from "@/assets/easy-ppp2.png";
 import Postman from "@/assets/postman.webp";
 import LandingPage from "@/assets/landing-page.png";
-import macosPortfolio from "@/assets/macos-portfolio.png.asset.json";
-import majehub from "@/assets/majehub.avif.asset.json";
+import macosPortfolio from "@/assets/macos-portfolio.avif";
+import majehub from "@/assets/majehub.avif";
 
 const Portfolio = () => {
   const projects = [
@@ -25,22 +25,30 @@ const Portfolio = () => {
       title: "macOS-Inspired Portfolio",
       description:
         "A macOS-style desktop portfolio with dock buttons, draggable windows, and fluid animations—every click opens a new window for an engaging mini-OS experience.",
-      image: macosPortfolio.url,
-      tech: ["React", "Vite", "GSAP", "Framer Motion", "Zustand", "react-pdf", "Tailwind CSS"],
+      image: macosPortfolio,
+      tech: [
+        "React",
+        "Vite",
+        "GSAP",
+        "Framer Motion",
+        "Zustand",
+        "react-pdf",
+        "Tailwind CSS",
+      ],
       highlights: [
         "Draggable, resizable macOS-style windows",
         "Dock with launch animations and reusable components",
         "Smooth GSAP + Framer Motion interactions",
       ],
       demoUrl: "https://haruna-web.netlify.app/",
-      repoUrl: "https://github.com/harunaGuru",
+      repoUrl: "https://github.com/harunaGuru/macos_portfolio",
     },
     {
       id: 6,
       title: "Majehub Marketplace",
       description:
         "Enterprise-grade e-commerce marketplace with three frontend portals (User, Seller, Admin) and 11 decoupled backend microservices designed for scale, resilience, and real-time engagement.",
-      image: majehub.url,
+      image: majehub,
       tech: [
         "Nx Monorepo",
         "Next.js",
@@ -169,7 +177,7 @@ const Portfolio = () => {
       ? projects
       : projects.filter((p) => {
           const matches = p.tech.some(
-            (t) => t.toLowerCase() === activeFilter.toLowerCase()
+            (t) => t.toLowerCase() === activeFilter.toLowerCase(),
           );
           // Pinned projects appear in every filter except GSAP
           if (p.pinned && activeFilter.toLowerCase() !== "gsap") return true;

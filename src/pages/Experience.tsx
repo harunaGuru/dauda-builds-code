@@ -10,16 +10,37 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, ExternalLink, Download } from "lucide-react";
 import { Link } from "react-router-dom";
-// import HarunaCV from "@/assets/Haruna_Dauda_CV.pdf";
-import CV from "@/assets/myCV.pdf";
+import CV from "@/assets/Haruna-Dauda-Resume.pdf";
 
 const Experience = () => {
   const experiences = [
     {
+      title: "Freelance & Contract Software Developer",
+      company: "Self-employed",
+      location: "Abuja, Nigeria",
+      period: "Nov 2025 – present",
+      type: "Freelance",
+      achievements: [
+        "Delivered 10+ projects for clients across various industries",
+        "Built e-commerce platforms with payment integration",
+        "Created landing pages with conversion optimization",
+        "Provided ongoing maintenance and support for client websites",
+      ],
+      tech: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Nodejs",
+        "Stripe",
+        "Firebase",
+      ],
+    },
+    {
       title: "Frontend Engineer",
       company: "Vehance Technologies",
       location: "Kano, Nigeria",
-      period: "Jan 2024 – May 2025",
+      period: "Jan 2024 – Oct 2025",
       type: "Contract",
       achievements: [
         "Led development of responsive web applications serving 10k+ users",
@@ -73,20 +94,6 @@ const Experience = () => {
       ],
       tech: ["React", "JavaScript", "CSS3", "Bootstrap", "MUI", "Git", "Jest"],
     },
-    // {
-    //   title: "Freelance Frontend Developer",
-    //   company: "Self-employed",
-    //   location: "Abuja, Nigeria",
-    //   period: "Nov 2021 – Mar 2023",
-    //   type: "Freelance",
-    //   achievements: [
-    //     "Delivered 15+ projects for clients across various industries",
-    //     "Built e-commerce platforms with payment integration",
-    //     "Created landing pages with conversion optimization",
-    //     "Provided ongoing maintenance and support for client websites",
-    //   ],
-    //   tech: ["HTML5", "CSS3", "JavaScript", "React", "WordPress"],
-    // },
   ];
 
   const skills = [
@@ -96,7 +103,14 @@ const Experience = () => {
     },
     {
       category: "Styling",
-      items: ["Tailwind CSS", "Styled Components", "SASS", "Bootstrap"],
+      items: [
+        "Tailwind CSS",
+        "Styled Components",
+        "SASS",
+        "Bootstrap",
+        "Material UI",
+        "shadcn UI",
+      ],
     },
     {
       category: "Tools",
@@ -107,6 +121,8 @@ const Experience = () => {
         "Jest",
         "React Testing Library",
         "Postman",
+        "Rechart",
+        "ApexCharts",
       ],
     },
     {
@@ -115,7 +131,7 @@ const Experience = () => {
     },
     {
       category: "State Management",
-      items: ["Redux Toolkit", "Tanstack Query", "Context API"],
+      items: ["Redux Toolkit", "Tanstack Query", "Context API", "Zustand"],
     },
     {
       category: "Performance and Optimization",
@@ -127,8 +143,29 @@ const Experience = () => {
         "Lighthouse Audits",
       ],
     },
-    // { category: "Backend", items: ["Node.js", "Express", "REST APIs"] },
-    // { category: "Database", items: ["MongoDB", "PostgreSQL", "Firebase"] }
+    {
+      category: "Backend",
+      items: [
+        "Node.js",
+        "Express",
+        "REST APIs",
+        "prisma",
+        "mongoose",
+        "supabase",
+        "stripe",
+        "tensorflow",
+        "kafka",
+        "socket.io",
+        "swagger",
+        "node-mailer",
+        "node-cron",
+        "imagekit",
+      ],
+    },
+    {
+      category: "Database",
+      items: ["MongoDB", "PostgreSQL", "Firebase", "Redis", "Plannetscale"],
+    },
   ];
 
   return (

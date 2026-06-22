@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import CV from "@/assets/myCV.pdf";
+import CV from "@/assets/Haruna-Dauda-Resume.pdf";
 
 const About = () => {
   return (
@@ -18,8 +18,8 @@ const About = () => {
         >
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">About Me</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Passionate frontend developer crafting digital experiences with
-            modern technologies
+            Passionate Fullstack developer(Frontend-Focused) crafting digital
+            experiences with modern technologies
           </p>
         </motion.div>
 
@@ -33,14 +33,13 @@ const About = () => {
           <Card className="p-8">
             <CardContent className="p-0">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                I’m a frontend developer with over 4 years of experience, based
-                in Abuja, Nigeria. I’ve worked on a variety of projects, from
-                streaming platforms to ecommerce applications, with a strong
-                focus on building performant, accessible, and responsive web
-                apps. While I specialize in React and Next.js on the frontend, I
-                also have working knowledge of backend technologies, which helps
-                me integrate APIs effectively and deliver seamless user
-                experiences across all devices.
+                I am a Fullstack Developer with over 4 years of experience,
+                specializing in frontend architecture and user-centric design. I
+                build fast, scalable web applications using React, Next.js, and
+                Node.js, with a strong emphasis on performance, accessibility,
+                and clean code. I bridge intuitive interfaces with reliable
+                backend systems, leveraging modern tools and AI-assisted
+                workflows to deliver efficient, production-ready solutions.
               </p>
             </CardContent>
           </Card>
