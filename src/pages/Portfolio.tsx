@@ -167,11 +167,14 @@ const Portfolio = () => {
   const filteredProjects =
     activeFilter === "All"
       ? projects
-      : projects.filter((p) =>
-          p.tech.some(
+      : projects.filter((p) => {
+          const matches = p.tech.some(
             (t) => t.toLowerCase() === activeFilter.toLowerCase()
-          )
-        );
+          );
+          // Pinned projects appear in every filter except GSAP
+          if (p.pinned && activeFilter.toLowerCase() !== "gsap") return true;
+          return matches;
+        });
 
   return (
     <div className="py-20">
