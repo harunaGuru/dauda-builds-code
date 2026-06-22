@@ -188,10 +188,11 @@ const Portfolio = () => {
 
           {/* Tech Filters */}
           <div className="flex flex-wrap gap-2 justify-center">
-            {techFilters.map((tech, index) => (
+            {techFilters.map((tech) => (
               <Badge
                 key={tech}
-                variant={index === 0 ? "default" : "secondary"}
+                variant={activeFilter === tech ? "default" : "secondary"}
+                onClick={() => setActiveFilter(tech)}
                 className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 {tech}
@@ -202,7 +203,7 @@ const Portfolio = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
