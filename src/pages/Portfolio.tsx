@@ -60,7 +60,7 @@ const Portfolio = () => {
         "ML-powered recommendations with TensorFlow.js, Redis caching, device tracking",
       ],
       demoUrl: "#",
-      repoUrl: "#",
+      repoUrl: "https://github.com/harunaGuru/majehub",
       comingSoon: true,
     },
     {
