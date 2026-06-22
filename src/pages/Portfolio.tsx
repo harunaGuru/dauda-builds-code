@@ -14,6 +14,8 @@ import ecommerceProject from "@/assets/ecommerce-project.png";
 import EassyPPP from "@/assets/easy-ppp2.png";
 import Postman from "@/assets/postman.webp";
 import LandingPage from "@/assets/landing-page.png";
+import macosPortfolio from "@/assets/macos-portfolio.png.asset.json";
+import majehub from "@/assets/majehub.avif.asset.json";
 
 const Portfolio = () => {
   const projects = [
