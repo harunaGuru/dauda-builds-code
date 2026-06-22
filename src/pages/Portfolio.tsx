@@ -63,6 +63,7 @@ const Portfolio = () => {
       demoUrl: "#",
       repoUrl: "https://github.com/harunaGuru/majehub",
       comingSoon: true,
+      pinned: true,
     },
     {
       title: "ParityDeals Clone",
