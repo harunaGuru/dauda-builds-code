@@ -68,9 +68,8 @@ const Portfolio = () => {
         "Real-time seller/user chat, analytics & logging via WebSocket + Kafka",
         "ML-powered recommendations with TensorFlow.js, Redis caching, device tracking",
       ],
-      demoUrl: "#",
+      demoUrl: "https://majehub-user-ui.vercel.app/login",
       repoUrl: "https://github.com/harunaGuru/majehub",
-      comingSoon: true,
       pinned: true,
     },
     {
