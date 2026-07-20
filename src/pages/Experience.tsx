@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, ExternalLink, Download } from "lucide-react";
 import { Link } from "react-router-dom";
-import CV from "@/assets/Haruna-Dauda-Resume.pdf";
+const CV = "/Haruna-Dauda-Resume.pdf";
 
 const Experience = () => {
   const experiences = [
