@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, ExternalLink, Download } from "lucide-react";
 import { Link } from "react-router-dom";
-import CV from "@/assets/Haruna-Dauda-Resume.pdf";
+const CV = "/Haruna-Dauda-Resume.pdf";
 
 const Experience = () => {
   const experiences = [
@@ -306,12 +306,13 @@ const Experience = () => {
             Download my full CV or get in touch to discuss opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={CV} download>
+            <a href={CV} download="Haruna-Dauda-Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="group">
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
               </Button>
             </a>
+
 
             <Button variant="outline" size="lg">
               <Link to="/contact">
