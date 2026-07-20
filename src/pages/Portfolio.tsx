@@ -68,9 +68,8 @@ const Portfolio = () => {
         "Real-time seller/user chat, analytics & logging via WebSocket + Kafka",
         "ML-powered recommendations with TensorFlow.js, Redis caching, device tracking",
       ],
-      demoUrl: "#",
+      demoUrl: "https://majehub-user-ui.vercel.app/login",
       repoUrl: "https://github.com/harunaGuru/majehub",
-      comingSoon: true,
       pinned: true,
     },
     {
@@ -231,22 +230,16 @@ const Portfolio = () => {
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                    {project.comingSoon ? (
-                      <Badge variant="default" className="text-sm px-4 py-2">
-                        Coming Soon
-                      </Badge>
-                    ) : (
-                      <Button size="sm" asChild>
-                        <a
-                          href={project.demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          Live Demo
-                        </a>
-                      </Button>
-                    )}
+                    <Button size="sm" asChild>
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
                     <Button variant="outline" size="sm" asChild>
                       <a
                         href={project.repoUrl}
