@@ -123,15 +123,16 @@ const Experience = () => {
     },
     {
       category: "Animation",
-      items: ["GSAP", "Framer Motion"],
+      items: ["GSAP", "ScrollTrigger", "Framer Motion"],
     },
     {
-      category: "Data Visualization",
+      category: "Data Visualization & Editors",
       items: [
         "TanStack/React-Table",
         "Recharts",
         "Leaflet",
         "Mapbox",
+        "CodeMirror",
       ],
     },
     {
@@ -143,8 +144,12 @@ const Experience = () => {
       items: [
         "Node.js",
         "Express",
+        "REST APIs",
         "API Integration",
         "Swagger",
+        "WebSocket",
+        "Kafka",
+        "Firebase Auth",
       ],
     },
     {
@@ -154,9 +159,14 @@ const Experience = () => {
         "PostgreSQL",
         "Prisma",
         "Redis",
-        "Kafka",
         "Docker",
+        "Nx Monorepo",
+        "Bun",
       ],
+    },
+    {
+      category: "AI / ML",
+      items: ["TensorFlow.js"],
     },
     {
       category: "Practices",
@@ -314,8 +324,8 @@ const Experience = () => {
             </a>
 
 
-            <Button variant="outline" size="lg">
-              <Link to="/contact">
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/contact" className="inline-flex items-center">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Contact Me
               </Link>

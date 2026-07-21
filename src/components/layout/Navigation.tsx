@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
+import logoAsset from "@/assets/portfolio-logo.png.asset.json";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -40,9 +41,10 @@ const Navigation = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="text-4xl font-bold text-primary hover:text-primary-hover transition-colors"
+            className="flex items-center hover:opacity-80 transition-opacity"
+            aria-label="Home"
           >
-            HOD
+            <img src={logoAsset.url} alt="HOD logo" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
