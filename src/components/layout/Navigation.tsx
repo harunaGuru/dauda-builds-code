@@ -41,9 +41,10 @@ const Navigation = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="text-4xl font-bold text-primary hover:text-primary-hover transition-colors"
+            className="flex items-center hover:opacity-80 transition-opacity"
+            aria-label="Home"
           >
-            HOD
+            <img src={logoAsset.url} alt="HOD logo" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
