@@ -314,8 +314,8 @@ const Experience = () => {
             </a>
 
 
-            <Button variant="outline" size="lg">
-              <Link to="/contact">
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/contact" className="inline-flex items-center">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Contact Me
               </Link>
