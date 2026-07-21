@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import CV from "@/assets/Haruna-Dauda-Resume.pdf";
+const CV = "/Haruna-Dauda-Resume.pdf";
 
 const About = () => {
   return (
