@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
-import logoAsset from "@/assets/portfolio-logo.png.asset.json";
+import portfolioLogo from "@/assets/portfolio-logo.png";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -41,10 +41,14 @@ const Navigation = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center hover:opacity-80 transition-opacity"
-            aria-label="Home"
+            aria-label="Go to home page"
+            className="inline-flex items-center"
           >
-            <img src={logoAsset.url} alt="HOD logo" className="h-10 w-auto" />
+            <img
+              src={portfolioLogo}
+              alt="Dauda Oladipupo Haruna"
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
