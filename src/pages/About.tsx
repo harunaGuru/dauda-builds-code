@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import CV from "@/assets/Haruna-Dauda-Resume.pdf";
+const CV = "/Haruna-Dauda-Resume.pdf";
 
 const About = () => {
   return (
@@ -116,7 +116,7 @@ const About = () => {
           className="text-center"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={CV} download>
+            <a href={CV} download="Haruna-Dauda-Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="group">
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
