@@ -17,11 +17,40 @@ import Postman from "@/assets/postman.webp";
 import LandingPage from "@/assets/landing-page.png";
 import macosPortfolio from "@/assets/macos-portfolio.avif";
 import majehub from "@/assets/majehub.avif";
+import systema from "@/assets/systema.png";
 
 const Portfolio = () => {
   const projects = [
     {
       id: 0,
+      title: "Systema",
+      description:
+        "A real-time collaborative system design workspace that turns plain-English prompts into editable architecture graphs and generates comprehensive Markdown technical specifications.",
+      image: systema,
+      tech: [
+        "Next.js 16",
+        "React Flow",
+        "Liveblocks",
+        "TypeScript",
+        "Tailwind CSS",
+        "Prisma",
+        "PostgreSQL (Neon)",
+        "Clerk",
+        "Trigger.dev",
+        "Vercel Blob",
+        "Gemini & Groq",
+      ],
+      highlights: [
+        "AI-driven graph generation with built-in fallback providers",
+        "Real-time multi-user collaboration with live cursors and comments",
+        "Automated spec generation from canvas state and team discussions",
+        "Strict spec-driven agentic development workflow",
+      ],
+      demoUrl: "https://systema-fawn.vercel.app",
+      repoUrl: "https://github.com/harunaGuru/Systema",
+    },
+    {
+      id: 1,
       title: "macOS-Inspired Portfolio",
       description:
         "A macOS-style desktop portfolio with dock buttons, draggable windows, and fluid animations—every click opens a new window for an engaging mini-OS experience.",
@@ -44,7 +73,7 @@ const Portfolio = () => {
       repoUrl: "https://github.com/harunaGuru/macos_portfolio",
     },
     {
-      id: 6,
+      id: 2,
       title: "Majehub Marketplace",
       description:
         "Enterprise-grade e-commerce marketplace with three frontend portals (User, Seller, Admin) and 11 decoupled backend microservices designed for scale, resilience, and real-time engagement.",
@@ -73,6 +102,7 @@ const Portfolio = () => {
       pinned: true,
     },
     {
+      id: 3,
       title: "ParityDeals Clone",
       description:
         "A Next.js application featuring server-side rendering, payment integration, and dynamic pricing based on user location.",
@@ -94,7 +124,7 @@ const Portfolio = () => {
       pinned: true,
     },
     {
-      id: 2,
+      id: 4,
       title: "GSAP Animated Landing",
       description:
         "High-performance landing page with complex GSAP animations and scroll-triggered effects.",
@@ -109,7 +139,7 @@ const Portfolio = () => {
       repoUrl: "https://github.com/harunaGuru/awward-wining-landing-page",
     },
     {
-      id: 3,
+      id: 5,
       title: "Postman Clone",
       description:
         "API testing client with request parameters, response viewer, and environment variable management.",
@@ -124,7 +154,7 @@ const Portfolio = () => {
       repoUrl: "https://github.com/harunaGuru/postman-clone",
     },
     {
-      id: 4,
+      id: 6,
       title: "Netflix Clone",
       description:
         "A React-based streaming platform clone with responsive player UI, content browsing, and user authentication.",
@@ -139,7 +169,7 @@ const Portfolio = () => {
       repoUrl: "https://github.com/harunaGuru/netflix-clone",
     },
     {
-      id: 5,
+      id: 7,
       title: "E-commerce Platform",
       description:
         "A simple online store with product catalog and shopping car features.",
